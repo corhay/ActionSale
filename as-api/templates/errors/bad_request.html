@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css' rel='stylesheet'>
+    <title>400</title>
+</head>
+
+<body class="p-4">
+    <div class='mx-auto container text-center my-8'>
+        <h1 class='text-3xl'>Error 400: The request could not be processed</h1>
+        <p>You've tried to access a ressource without the right parameters</p>
+        <h1 class='text-6xl'>¯\_(ツ)_/¯</h1>
+    </div>
+    <div class="mx-auto container my-8 lg:w-1/2">
+        <h1 class="text-3xl ml-4">Usage: </h1>
+        <hr class="border border-black border-opacity-75 border-solid">
+        <span class="p-4">
+            <p class="font-mono bg-gray-900 text-white rounded p-2">/v1/discounts/all</p>
+            <span class="text-xl">Paramaters: </span>
+            <ul class="list-disc">
+                <div class="bg-gray-500 rounded my-2 lg:mx-16">
+                    <li class="mx-8 text-xl">search</li>
+                    <p class="py-2 ml-8">Returns products whose title contains at least one of the passed keywords</p>
+                </div>
+                <div class="bg-gray-500 rounded m-2 lg:mx-16">
+                    <li class="mx-8 text-xl">date</li>
+                    <p class="py-2 ml-8">Returns products available at a certain date | Format: <span class="font-mono">dd.mm.yyyy</span></p>
+                </div>
+                <div class="bg-gray-500 rounded m-2 lg:mx-16">
+                    <li class="mx-8 text-xl">store</li>
+                    <p class="py-2 ml-8">
+                        Returns products from the given store(s) | Options: <span class="font-mono">mig, denn, coop</span>
+                    </p>
+                </div>
+            </ul>
+            <span class="text-xl">Example:</span>
+            <div class="bg-gray-900 text-white rounded m-2 lg:mx-16">
+                <p class="font-mono p-2">/v1/discounts/all?search=pizza+beer&date=21.05.2020&store=coop+denn</p>
+            </div>
+            <p>The request above will return all products that contain either 'pizza' or 'beer' in their title that were available on the 21st of May 2020 from Coop and Denner</p>
+        </span>
+    </div>
+</body>
+
+</html>

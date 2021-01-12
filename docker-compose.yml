@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+    client:
+        build:
+            context: ./as-client
+            dockerfile: dockerfile
+        volumes: 
+            - '/app/node_modules'
+        ports:
+            - '8080:8080'
+    
+    api:
+        build:
+            context: ./as-api
+            dockerfile: dockerfile
+        ports: 
+            - '5000:5000'
+
